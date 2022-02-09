@@ -10,3 +10,9 @@ function makeBlue()
 {
     document.body.style.backgroundColor ='blue';
 }
+
+const buttonGreen = document.getElementById('make-button-green');
+buttonGreen.onclick = function makeGreen()
+{
+    document.body.style.backgroundColor = 'green';
+}
