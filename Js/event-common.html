@@ -8,9 +8,12 @@
 </head>
 <body>
     <p id="clicking-method"></p>
+    <input id="name-input-field" type="text">
+    <button id="update-name">Update</button>
     <button onclick="handleJustFunction()">Just Function</button>
     <button id="handle-event">Direct add Event Listener</button>
     <script>
+        // using function
         function handleJustFunction (){
             const p = document.getElementById('clicking-method');
             p.innerText = 'set by using function';
@@ -19,6 +22,15 @@
 document.getElementById('handle-event').addEventListener('click', function(){
     const p = document.getElementById('clicking-method');
     p.innerText = 'set by direct and event listner'
+})
+// direct
+document.getElementById('update-name').addEventListener('click',function(){
+    const nameField = document.getElementById('name-input-field');
+    // console.log(nameField.value);
+    const p = document.getElementById('clicking-method');
+    p.innerText = nameField.value;
+    nameField.value='';
+
 })
 
     </script>
