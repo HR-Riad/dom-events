@@ -11,8 +11,18 @@ function makeBlue()
     document.body.style.backgroundColor ='blue';
 }
 
+
+// handle event using anonymous function
 const buttonGreen = document.getElementById('make-button-green');
-buttonGreen.onclick = function makeGreen()
+buttonGreen.onclick = function ()
 {
     document.body.style.backgroundColor = 'green';
+}
+
+/* handle event using by EventListener */
+const goldenrodButton = document.getElementById('make-goldenrod-button');
+goldenrodButton.addEventListener('click',makeGoldenRod);
+
+function makeGoldenRod(){
+    document.body.style.background='goldenrod';
 }
