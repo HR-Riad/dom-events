@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+</head>
+<body>
+    <h2>Add your comment,plz!!</h2>
+    <section>
+        <h4>Your comments</h4>
+        <div id="comment-container">
+            
+            <p>Corrupti ex fugit minima doloremque aspernatur at nobis voluptas quae nisi dolore nihil quo ut magni, assumenda et tenetur distinctio tempora ab enim corporis pariatur quia animi. Optio, excepturi nisi!</p>
+            <p>Dolores voluptate reprehenderit hic consequuntur vero repudiandae nulla, ex soluta? Aspernatur magni eius incidunt delectus aliquam ratione, vel velit, quas sed cumque eligendi porro repudiandae quis quod voluptas. Sunt, enim.</p>
+        </div>
+
+        <div>
+           
+            <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+           <br>
+            <button id="submit-button">Post</button>
+        </div>
+    </section>
+    <script>
+        //1. add button event handler
+        document.getElementById('submit-button').addEventListener('click',function(){
+
+            //2. get user comment
+            const commentBox = document.getElementById('new-comment');
+
+            // 3. create comment paragraph
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+
+            //  4. append the comment
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(newComment);
+
+            //  5. clean the comment box
+            commentBox.value = '';
+
+        })
+    </script>
+</body>
+</html>
